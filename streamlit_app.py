@@ -1,82 +1,118 @@
 import streamlit as st
 
 # Set up the app title and sidebar
-st.set_page_config(page_title="Empowering Women", layout="wide")
+st.set_page_config(page_title="She Elevates", layout="wide")
 
 # Sidebar navigation
 st.sidebar.title("Navigate")
 page = st.sidebar.radio("Go to", ["Home", "Articles", "Success Stories", "Resources", "About Us"])
 
+# Story storage (for simplicity, we use session state)
+if "stories" not in st.session_state:
+    st.session_state.stories = []
+
 # Pages
 if page == "Home":
-    st.title("Welcome to Empower Women App!")
+    st.title("Welcome to She Elevates!")
     st.write("""
-        This app is a powerful platform designed to provide a wealth of resources, stories, and insightful guidance aimed at empowering women across the globe. 
-        Our mission is to inspire and educate women of all ages and backgrounds, equipping them with the tools and knowledge they need to overcome challenges, unlock their potential, 
-        and succeed in every aspect of life. Whether you're seeking to develop strong leadership skills, understand and assert your rights, improve your mental and physical well-being, 
-        or simply connect with a community of like-minded women, this app is here to support and guide you.
+        This app provides resources, stories, and insights to empower women worldwide. Our goal is to
+        inspire and educate, fostering an environment where women can thrive in all aspects of life. Whether
+        you're looking to build leadership skills, understand your rights, or connect with other women, you're
+        in the right place.
 
-        We believe that empowerment begins with education, self-awareness, and access to the right resources. Through empowering articles, success stories of women who have broken barriers, 
-        and practical tips for navigating personal and professional challenges, we aim to create an environment where every woman can thrive. We are committed to fostering a space where 
-        women can learn, grow, and collaborate, ultimately leading to the creation of a more equitable world where all women are able to achieve their goals, break down societal limitations, 
-        and lead fulfilling lives.
-
-        No matter where you are in your journey, whether you're looking to make informed decisions about your career, health, family, or finances, or seeking motivation from others who have paved the way, 
-        you're in the right place. Here, you’ll find everything you need to empower yourself, advocate for your rights, and contribute to a global community of empowered women.
+        **What We Offer:**
+        - **Leadership Skills:** Whether you're starting your career or looking to enhance your leadership abilities,
+          we provide resources to help you lead with confidence.
+        - **Know Your Rights:** Understanding your rights is the first step to securing your safety and well-being.
+          Our articles help you navigate the complexities of your legal rights.
+        - **Financial Independence:** Achieving financial independence is empowering, and we share tips and guidance
+          to help you take control of your finances.
+        - **Inspiring Stories:** Read empowering stories from women who have overcome challenges, broken barriers,
+          and made a difference. These stories serve as a source of inspiration for all.
+        
+        **Join Us!**
+        Empowerment is not just about knowledge, but about community. Join other women in this journey of
+        self-discovery, leadership, and resilience. Together, we rise.
     """)
+
+    # Button to share a story
+    st.subheader("Share Your Story")
+    user_story = st.text_area("What's your empowering story?", placeholder="Type your story here...")
+
+    if st.button("Submit Story"):
+        if user_story:
+            st.session_state.stories.append(user_story)
+            st.success("Thank you for sharing your story! It will appear in the Success Stories tab.")
+        else:
+            st.error("Please write your story before submitting.")
 
 elif page == "Articles":
     st.title("Educational Articles")
     st.write("""
-        **Leadership Skills**: 
-        Leadership is one of the most crucial skills for personal and professional success. In this article, we dive deep into the importance of leadership qualities such as confidence, communication, and resilience. 
-        Learn how to develop a growth mindset, inspire others, and become a true leader in your community and workplace. 
+        - **Leadership Skills**: Building leadership skills is essential for women who want to take charge of their
+          careers and lives. Our article provides insights on developing leadership qualities, managing teams,
+          and staying resilient in the face of challenges. These are the skills that will set you apart in any field.
 
-        **Know Your Rights**: 
-        Understanding your legal rights is essential in all aspects of life. Whether in the workplace, at home, or in your personal life, knowing your rights ensures that you can protect yourself and seek justice when needed. 
-        This article covers key areas such as workplace equality, reproductive rights, and protection from harassment, helping you understand how to navigate legal systems and assert your rights effectively.
+        - **Know Your Rights**: Knowledge is power. Understanding your rights in different contexts, from the workplace
+          to personal matters, is key to maintaining control over your life. In this section, we explore the importance
+          of legal awareness and how knowing your rights can safeguard you against potential challenges.
 
-        **Financial Independence**: 
-        Achieving financial independence is a major milestone for many women, offering the freedom to make choices based on your desires and not on financial necessity. This article provides practical tips for budgeting, saving, investing, and building long-term wealth. 
-        We’ll also explore how to break the gender pay gap and make confident financial decisions for a secure future.
+        - **Financial Independence**: Financial independence is crucial for women, as it provides the freedom to make
+          choices, invest in your future, and live life on your own terms. We offer actionable steps, resources, and
+          advice to help you achieve financial security, from budgeting tips to investment strategies.
     """)
 
 elif page == "Success Stories":
-    st.title("Inspiring Stories")
+    st.title("Inspiring Success Stories")
     st.write("""
-        **Marie Curie**: 
-        A pioneering scientist who not only made groundbreaking contributions to science but also defied societal expectations in a male-dominated field. Marie Curie’s resilience and dedication led her to become the first woman to win the Nobel Prize and the only person to win the Nobel Prize in two different scientific fields—Physics and Chemistry. Her story continues to inspire women in STEM fields today.
+        These are the stories of women who have overcome challenges, achieved greatness, and made a difference.
+        Whether it's in business, education, or activism, these stories show that with determination and courage, women
+        can achieve anything. Feel free to share your own story and inspire others!
 
-        **Malala Yousafzai**: 
-        A passionate advocate for girls’ education and the youngest recipient of the Nobel Peace Prize. Malala’s story is one of incredible courage and determination, as she fought for her right to education despite facing grave danger and adversity. Her commitment to improving the lives of girls around the world has made her an icon of resilience and hope.
-
-        **Your Story**: 
-        Every woman has a story of triumph, resilience, and strength. Your experiences—whether in overcoming personal challenges, achieving goals, or breaking societal barriers—are powerful and inspiring. 
-        Share your journey and connect with others who are walking similar paths. By sharing our stories, we support and uplift one another.
+        **Here are some of the stories we’ve collected so far:**
     """)
+
+    # Display the stories
+    if st.session_state.stories:
+        for idx, story in enumerate(st.session_state.stories):
+            st.write(f"**Story {idx + 1}:** {story}")
+    else:
+        st.write("No stories yet. Be the first to share your empowering story!")
 
 elif page == "Resources":
     st.title("Resources for Help")
     st.write("""
-        **Mental Health Support**: 
-        Mental health is a critical aspect of overall well-being. This section provides information on mental health services, counseling, support groups, and self-care practices. Whether you're seeking professional help or looking for ways to manage stress, anxiety, or depression, these resources can guide you toward healing and empowerment.
-
-        **Legal Aid**: 
-        Knowing where to turn for legal help is vital for every woman. This section offers guidance on how to access legal resources, including pro bono legal services, organizations that advocate for women’s rights, and advice on how to navigate legal issues such as domestic violence, discrimination, and child custody.
-
-        **Workshops**: 
-        Workshops are a fantastic way to gain new skills, build confidence, and network with other like-minded women. This section highlights upcoming workshops, seminars, and online courses that focus on personal growth, leadership development, and financial literacy. Stay tuned for opportunities to enhance your life and career.
+        - **Mental Health Support**: Mental well-being is an essential part of overall health. We've compiled a list
+          of organizations and resources that provide mental health support to women, including hotlines, counseling
+          services, and online platforms for emotional well-being.
+        
+        - **Legal Aid**: Knowing where to turn for legal support can make all the difference. We provide resources for
+          legal aid services, from family law and harassment cases to employment discrimination. Empower yourself with
+          the knowledge of your legal options.
+        
+        - **Workshops and Events**: Attend workshops, webinars, and events that promote women's empowerment, skill-building,
+          and personal growth. These resources are designed to equip women with the tools they need to thrive in
+          various aspects of life, including professional development, self-care, and leadership.
     """)
 
 elif page == "About Us":
-    st.title("About Empower Women")
+    st.title("About She Elevates")
     st.write("""
-        Empower Women is a global initiative created with the goal of educating, inspiring, and connecting women across the world. Our platform is dedicated to promoting gender equality and supporting women in all aspects of their lives, including career development, personal growth, mental health, and social change.
+        She Elevates is a platform created with the vision of empowering women across the globe. We strive to create
+        a world where women feel supported, educated, and inspired. Our mission is to provide valuable resources,
+        share inspiring stories, and foster an environment where women can lead, achieve, and thrive.
 
-        We understand the importance of access to knowledge, opportunities, and community, which is why we provide resources such as articles, success stories, and practical tools designed to help women overcome barriers and achieve their full potential. 
-        Our mission is to break down the societal limitations that hold women back and create an environment where every woman can thrive and contribute to a more equal world.
+        **Our Mission:**
+        To empower women with the knowledge, skills, and resources they need to live fulfilling and successful lives.
+        By providing educational content, legal advice, financial resources, and mental health support, we aim to
+        create a more equal and just world for women.
 
-        Together, we can uplift one another and build a future where gender equality is not just a dream but a reality. Join us in this important movement as we work to create a world where all women have the resources, support, and opportunities they need to live fulfilling lives.
+        **Why We Do It:**
+        Empowering women means creating a world where women have equal opportunities to succeed, make choices, and
+        contribute to society in meaningful ways. Through She Elevates, we hope to inspire a global movement where
+        women support and uplift each other.
+
+        Join us in making the world a better place for women everywhere!
     """)
 
 # Footer
