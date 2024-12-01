@@ -11,10 +11,7 @@ page = st.sidebar.radio("Go to", ["Home", "Articles", "Success Stories", "Resour
 if page == "Home":
     st.title("Welcome to Empower Women App!")
     st.write("""
-        This app provides resources, stories, and insights to empower women worldwide. Our goal is to
-        inspire and educate, fostering an environment where women can thrive in all aspects of life. Whether
-        you're looking to build leadership skills, understand your rights, or connect with other women, you're
-        in the right place.
+        This app is a powerful platform designed to provide a wealth of resources, stories, and insightful guidance aimed at empowering women across the globe. Our mission is to inspire and educate women of all ages and backgrounds, equipping them with the tools and knowledge they need to overcome challenges, unlock their potential, and succeed in every aspect of life. Whether you're seeking to develop strong leadership skills, understand and assert your rights, improve your mental and physical well-being, or simply connect with a community of like-minded women, this app is here to support and guide you.We believe that empowerment begins with education, self-awareness, and access to the right resources. Through empowering articles, success stories of women who have broken barriers, and practical tips for navigating personal and professional challenges, we aim to create an environment where every woman can thrive. We are committed to fostering a space where women can learn, grow, and collaborate, ultimately leading to the creation of a more equitable world where all women are able to achieve their goals, break down societal limitations, and lead fulfilling lives.No matter where you are in your journey, whether you're looking to make informed decisions about your career, health, family, or finances, or seeking motivation from others who have paved the way, you're in the right place. Here, you’ll find everything you need to empower yourself, advocate for your rights, and contribute to a global community of empowered women.
     """)
     st.write("""
         **What We Offer:**
