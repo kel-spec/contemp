@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 
 # Set up the app title and sidebar
 st.set_page_config(page_title="She Elevates", layout="wide")
@@ -177,7 +178,7 @@ elif page == "About Us":
         "“A woman with a voice is, by definition, a strong woman.” – Melinda Gates",
         "“The most courageous act is still to think for yourself. Aloud.” – Coco Chanel"
     ]
-    st.write(random.choice(quotes))
+    st.write(random.choice(quotes))  # This line works now with the random module imported
 
     # Empowerment Pledge (Users can make a commitment)
     st.subheader("Make Your Empowerment Pledge")
