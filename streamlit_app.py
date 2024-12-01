@@ -126,109 +126,110 @@ elif page == "Resources":
         looking for educational materials, financial advice, or ways to get involved with non-profits, you'll find it here.
     """)
 
-    # Books Section
-    st.header("Books for Empowerment")
-    st.write("""
-        Explore these insightful books that discuss women's empowerment, leadership, financial independence, and more.
-    """)
-    
-    books = [
-        ("**Lean In: Women, Work, and the Will to Lead**", "Sheryl Sandberg's groundbreaking book that encourages women to pursue leadership roles and challenges gender inequality in the workplace."),
-        ("**The Moment of Lift: How Empowering Women Changes the World**", "Melinda Gates' inspiring call to action for improving women's health, education, and economic opportunities."),
-        ("**Women Who Run with the Wolves**", "Clarissa Pinkola Estés shares the powerful stories of wild women and their untamed spirit, encouraging women to reclaim their power."),
-        ("**The Power of Now: A Guide to Spiritual Enlightenment**", "Eckhart Tolle's transformative teachings on mindfulness and self-awareness, helping women to focus on the present moment.")
-    ]
-    
-    for title, description in books:
-        st.subheader(title)
-        st.write(description)
-    
-    # Websites Section
-    st.header("Websites for Support and Resources")
-    st.write("""
-        These websites offer valuable resources, advocacy, and education about women's rights, health, and empowerment.
-    """)
-    
-    websites = [
-        ("[UN Women](https://www.unwomen.org)", "The United Nations' global champion for gender equality, providing resources and support for women's empowerment worldwide."),
-        ("[National Organization for Women](https://now.org)", "NOW is the largest organization of feminist activists in the United States, advocating for equal rights and justice for women."),
-        ("[Global Fund for Women](https://www.globalfundforwomen.org)", "A global champion for the rights of women and girls, funding organizations working on gender equality across the world."),
-        ("[Women for Women International](https://www.womenforwomen.org)", "An organization that helps women survivors of war and conflict to rebuild their lives and become leaders in their communities.")
-    ]
-    
-    for site, description in websites:
-        st.subheader(site)
-        st.write(description)
-    
-    # Non-Profit Organizations Section
-    st.header("Non-Profit Organizations Supporting Women")
-    st.write("""
-        These non-profits focus on advocacy, education, and empowerment, providing essential services to women in need.
-    """)
-    
-    nonprofits = [
-        ("[Malala Fund](https://www.malala.org)", "The Malala Fund advocates for girls' education and works to eliminate the barriers preventing girls from going to school."),
-        ("[The Women's Foundation](https://www.thewomensfoundation.org)", "An organization dedicated to advancing the economic and political power of women."),
-        ("[Equal Rights Advocates](https://www.equalrights.org)", "Equal Rights Advocates focuses on advancing gender justice in workplaces and schools, fighting for equal rights for all women."),
-        ("[Girls Who Code](https://www.girlswhocode.com)", "An organization dedicated to closing the gender gap in technology by empowering girls to code.")
-    ]
-    
-    for org, description in nonprofits:
-        st.subheader(org)
-        st.write(description)
+    # Books Section - Collapsible
+    with st.expander("Books for Empowerment"):
+        st.write("""
+            Explore these insightful books that discuss women's empowerment, leadership, financial independence, and more.
+        """)
 
-    # Online Courses Section
-    st.header("Online Courses and Learning Platforms")
-    st.write("""
-        The following platforms offer courses and resources designed to empower women by providing the skills and knowledge
-        needed to succeed in various fields.
-    """)
+        books = [
+            ("**Lean In: Women, Work, and the Will to Lead**", "Sheryl Sandberg's groundbreaking book that encourages women to pursue leadership roles and challenges gender inequality in the workplace."),
+            ("**The Moment of Lift: How Empowering Women Changes the World**", "Melinda Gates' inspiring call to action for improving women's health, education, and economic opportunities."),
+            ("**Women Who Run with the Wolves**", "Clarissa Pinkola Estés shares the powerful stories of wild women and their untamed spirit, encouraging women to reclaim their power."),
+            ("**The Power of Now: A Guide to Spiritual Enlightenment**", "Eckhart Tolle's transformative teachings on mindfulness and self-awareness, helping women to focus on the present moment.")
+        ]
+        
+        for title, description in books:
+            st.subheader(title)
+            st.write(description)
     
-    courses = [
-        ("[Coursera - Women in Leadership](https://www.coursera.org/learn/women-leadership)", "A comprehensive course aimed at helping women step into leadership roles in their respective industries."),
-        ("[LinkedIn Learning - Personal Branding for Women](https://www.linkedin.com/learning/personal-branding-for-women)", "Learn how to create and communicate your personal brand to succeed in your career and business."),
-        ("[EdX - Women in the Workplace](https://www.edx.org/course/women-in-the-workplace)", "This course provides an overview of the challenges and strategies for women to succeed in the corporate world."),
-        ("[Udemy - Financial Literacy for Women](https://www.udemy.com/course/financial-literacy-for-women/)", "A course designed to help women gain financial independence and understanding of investment strategies.")
-    ]
-    
-    for course, description in courses:
-        st.subheader(course)
-        st.write(description)
+    # Websites Section - Collapsible
+    with st.expander("Websites for Support and Resources"):
+        st.write("""
+            These websites offer valuable resources, advocacy, and education about women's rights, health, and empowerment.
+        """)
 
-    # Videos and Documentaries Section
-    st.header("Inspirational Videos and Documentaries")
-    st.write("""
-        Watch these empowering videos and documentaries that feature the stories of women overcoming challenges, breaking barriers,
-        and leading the way for gender equality.
-    """)
+        websites = [
+            ("[UN Women](https://www.unwomen.org)", "The United Nations' global champion for gender equality, providing resources and support for women's empowerment worldwide."),
+            ("[National Organization for Women](https://now.org)", "NOW is the largest organization of feminist activists in the United States, advocating for equal rights and justice for women."),
+            ("[Global Fund for Women](https://www.globalfundforwomen.org)", "A global champion for the rights of women and girls, funding organizations working on gender equality across the world."),
+            ("[Women for Women International](https://www.womenforwomen.org)", "An organization that helps women survivors of war and conflict to rebuild their lives and become leaders in their communities.")
+        ]
+        
+        for site, description in websites:
+            st.subheader(site)
+            st.write(description)
     
-    videos = [
-        ("[The Feminist on Cellblock Y](https://www.netflix.com/title/81020607)", "A documentary about the transformative power of feminism and activism inside a women's prison."),
-        ("[He Named Me Malala](https://www.youtube.com/watch?v=3J6OuvzZh0Y)", "The powerful story of Malala Yousafzai, who defied the Taliban to advocate for girls' education."),
-        ("[RBG](https://www.youtube.com/watch?v=biIRw5tKePQ)", "A documentary that chronicles the life of U.S. Supreme Court Justice Ruth Bader Ginsburg, a pioneer for gender equality."),
-        ("[The Mask You Live In](https://www.youtube.com/watch?v=hc45-ptHMxo)", "A film that explores the toxic influences of masculinity, providing insight into the social pressures faced by both men and women.")
-    ]
-    
-    for video, description in videos:
-        st.subheader(video)
-        st.write(description)
+    # Non-Profit Organizations Section - Collapsible
+    with st.expander("Non-Profit Organizations Supporting Women"):
+        st.write("""
+            These non-profits focus on advocacy, education, and empowerment, providing essential services to women in need.
+        """)
 
-    # Articles Section
-    st.header("Articles and Blogs")
-    st.write("""
-        These articles and blogs provide the latest news, opinions, and insights on women's rights, gender equality, and empowerment.
-    """)
-    
-    articles = [
-        ("[Why Women Empowerment is the Future of Work](https://www.forbes.com/sites/forbeshumanresourcescouncil/2022/03/07/why-women-empowerment-is-the-future-of-work/)", "An article exploring why gender equality and women empowerment will be crucial to the future of work and economic recovery."),
-        ("[The Future of Women's Rights](https://www.weforum.org/agenda/2021/03/the-future-of-women-s-rights/)", "An exploration of the current state of women's rights and the progress needed for gender equality."),
-        ("[Empowering Women Through Education](https://www.education.com/article/empowering-women-through-education/)", "An article on how education can break cycles of poverty, promote self-reliance, and empower women globally."),
-        ("[How to Advocate for Women's Rights](https://www.amnesty.org/en/latest/campaigns/2022/03/how-to-advocate-for-womens-rights/)", "A comprehensive guide on how to become an advocate for women's rights, including actionable steps.")
-    ]
-    
-    for article, description in articles:
-        st.subheader(article)
-        st.write(description)
+        nonprofits = [
+            ("[Malala Fund](https://www.malala.org)", "The Malala Fund advocates for girls' education and works to eliminate the barriers preventing girls from going to school."),
+            ("[The Women's Foundation](https://www.thewomensfoundation.org)", "An organization dedicated to advancing the economic and political power of women."),
+            ("[Equal Rights Advocates](https://www.equalrights.org)", "Equal Rights Advocates focuses on advancing gender justice in workplaces and schools, fighting for equal rights for all women."),
+            ("[Girls Who Code](https://www.girlswhocode.com)", "An organization dedicated to closing the gender gap in technology by empowering girls to code.")
+        ]
+        
+        for org, description in nonprofits:
+            st.subheader(org)
+            st.write(description)
+
+    # Online Courses Section - Collapsible
+    with st.expander("Online Courses and Learning Platforms"):
+        st.write("""
+            The following platforms offer courses and resources designed to empower women by providing the skills and knowledge
+            needed to succeed in various fields.
+        """)
+
+        courses = [
+            ("[Coursera - Women in Leadership](https://www.coursera.org/learn/women-leadership)", "A comprehensive course aimed at helping women step into leadership roles in their respective industries."),
+            ("[LinkedIn Learning - Personal Branding for Women](https://www.linkedin.com/learning/personal-branding-for-women)", "Learn how to create and communicate your personal brand to succeed in your career and business."),
+            ("[EdX - Women in the Workplace](https://www.edx.org/course/women-in-the-workplace)", "This course provides an overview of the challenges and strategies for women to succeed in the corporate world."),
+            ("[Udemy - Financial Literacy for Women](https://www.udemy.com/course/financial-literacy-for-women/)", "A course designed to help women gain financial independence and understanding of investment strategies.")
+        ]
+        
+        for course, description in courses:
+            st.subheader(course)
+            st.write(description)
+
+    # Videos and Documentaries Section - Collapsible
+    with st.expander("Inspirational Videos and Documentaries"):
+        st.write("""
+            Watch these empowering videos and documentaries that feature the stories of women overcoming challenges, breaking barriers,
+            and leading the way for gender equality.
+        """)
+
+        videos = [
+            ("[The Feminist on Cellblock Y](https://www.netflix.com/title/81020607)", "A documentary about the transformative power of feminism and activism inside a women's prison."),
+            ("[He Named Me Malala](https://www.youtube.com/watch?v=3J6OuvzZh0Y)", "The powerful story of Malala Yousafzai, who defied the Taliban to advocate for girls' education."),
+            ("[RBG](https://www.youtube.com/watch?v=biIRw5tKePQ)", "A documentary that chronicles the life of U.S. Supreme Court Justice Ruth Bader Ginsburg, a pioneer for gender equality."),
+            ("[The Mask You Live In](https://www.youtube.com/watch?v=hc45-ptHMxo)", "A film that explores the toxic influences of masculinity, providing insight into the social pressures faced by both men and women.")
+        ]
+        
+        for video, description in videos:
+            st.subheader(video)
+            st.write(description)
+
+    # Articles Section - Collapsible
+    with st.expander("Articles and Blogs"):
+        st.write("""
+            These articles and blogs provide the latest news, opinions, and insights on women's rights, gender equality, and empowerment.
+        """)
+
+        articles = [
+            ("[Why Women Empowerment is the Future of Work](https://www.forbes.com/sites/forbeshumanresourcescouncil/2022/03/07/why-women-empowerment-is-the-future-of-work/)", "An article exploring why gender equality and women empowerment will be crucial to the future of work and economic recovery."),
+            ("[The Future of Women's Rights](https://www.weforum.org/agenda/2021/03/the-future-of-women-s-rights/)", "An exploration of the current state of women's rights and the progress needed for gender equality."),
+            ("[Empowering Women Through Education](https://www.education.com/article/empowering-women-through-education/)", "An article on how education can break cycles of poverty, promote self-reliance, and empower women globally."),
+            ("[How to Advocate for Women's Rights](https://www.amnesty.org/en/latest/campaigns/2022/03/how-to-advocate-for-womens-rights/)", "A comprehensive guide on how to become an advocate for women's rights, including actionable steps.")
+        ]
+        
+        for article, description in articles:
+            st.subheader(article)
+            st.write(description)
+            
 elif page == "About Us":
     st.title("About She Elevates")
     st.write("""
