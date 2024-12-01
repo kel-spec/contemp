@@ -1,6 +1,34 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import json
 import os
+
+components.html("""
+    <html>
+        <head>
+            <style>
+                body {
+                    background-color: #f0f0f0;
+                }
+                .fade {
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                }
+                .fade.show {
+                    opacity: 1;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="content" class="fade">Your content here</div>
+            <script>
+                window.onload = () => {
+                    document.getElementById('content').classList.add('show');
+                };
+            </script>
+        </body>
+    </html>
+""", height=600)
 
 # Set up the app title and sidebar
 st.set_page_config(page_title="She Elevates", layout="wide")
