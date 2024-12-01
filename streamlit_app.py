@@ -31,33 +31,6 @@ if "stories" not in st.session_state:
 
 # Pages
 if page == "Home":
-    components.html("""
-    <html>
-        <head>
-            <style>
-                body {
-                    background-color: #f0f0f0;
-                }
-                .fade {
-                    opacity: 0;
-                    transition: opacity 1s ease-in-out;
-                }
-                .fade.show {
-                    opacity: 1;
-                }
-            </style>
-        </head>
-        <body>
-            <div id="content" class="fade">Your content here</div>
-            <script>
-                window.onload = () => {
-                    document.getElementById('content').classList.add('show');
-                };
-            </script>
-        </body>
-    </html>
-""", height=600)
-
     st.title("Welcome to She Elevates!")
     st.write("""
         This app provides resources, stories, and insights to empower women worldwide. Our goal is to
