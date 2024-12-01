@@ -85,7 +85,7 @@ elif page == "Articles":
         - **Leadership Skills**: Building leadership skills is essential for women who want to take charge of their
           careers and lives. Our article provides insights on developing leadership qualities, managing teams,
           and staying resilient in the face of challenges. These are the skills that will set you apart in any field.
-          [Read More: Leadership Skills](https://www.forbes.com/sites/forbeshumanresourcescouncil/2020/01/28/five-essential-leadership-skills-every-woman-should-develop/?sh=167a2ff34b93)
+          [Read More: Leadership Skills](https://www.imd.org/blog/leadership/women-in-leadership/)
 
         - **Know Your Rights**: Knowledge is power. Understanding your rights in different contexts, from the workplace
           to personal matters, is key to maintaining control over your life. In this section, we explore the importance
