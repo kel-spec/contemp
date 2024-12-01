@@ -81,18 +81,22 @@ elif page == "Success Stories":
 
 elif page == "Articles":
     st.title("Educational Articles")
-    st.write(""" 
+    st.write("""
         - **Leadership Skills**: Building leadership skills is essential for women who want to take charge of their
           careers and lives. Our article provides insights on developing leadership qualities, managing teams,
           and staying resilient in the face of challenges. These are the skills that will set you apart in any field.
+          [Read More: Leadership Skills](https://www.forbes.com/sites/forbeshumanresourcescouncil/2020/01/28/five-essential-leadership-skills-every-woman-should-develop/?sh=167a2ff34b93)
+
         - **Know Your Rights**: Knowledge is power. Understanding your rights in different contexts, from the workplace
           to personal matters, is key to maintaining control over your life. In this section, we explore the importance
           of legal awareness and how knowing your rights can safeguard you against potential challenges.
+          [Read More: Know Your Rights](https://www.aclu.org/issues/womens-rights)
+
         - **Financial Independence**: Financial independence is crucial for women, as it provides the freedom to make
           choices, invest in your future, and live life on your own terms. We offer actionable steps, resources, and
           advice to help you achieve financial security, from budgeting tips to investment strategies.
+          [Read More: Financial Independence](https://www.investopedia.com/financial-literacy-for-women-5182212)
     """)
-
 elif page == "Resources":
     st.title("Resources for Help")
     st.write(""" 
