@@ -28,33 +28,55 @@ if page == "Home":
 elif page == "Articles":
     st.title("Educational Articles")
     st.write("""
-        - **Leadership Skills**: A comprehensive guide on how to build leadership qualities and make an impact.
-        - **Know Your Rights**: Learn about your legal rights and how to assert them in personal and professional settings.
-        - **Financial Independence**: Practical advice on managing finances, building wealth, and achieving financial freedom.
+        **Leadership Skills**: 
+        Leadership is one of the most crucial skills for personal and professional success. In this article, we dive deep into the importance of leadership qualities such as confidence, communication, and resilience. 
+        Learn how to develop a growth mindset, inspire others, and become a true leader in your community and workplace. 
+
+        **Know Your Rights**: 
+        Understanding your legal rights is essential in all aspects of life. Whether in the workplace, at home, or in your personal life, knowing your rights ensures that you can protect yourself and seek justice when needed. 
+        This article covers key areas such as workplace equality, reproductive rights, and protection from harassment, helping you understand how to navigate legal systems and assert your rights effectively.
+
+        **Financial Independence**: 
+        Achieving financial independence is a major milestone for many women, offering the freedom to make choices based on your desires and not on financial necessity. This article provides practical tips for budgeting, saving, investing, and building long-term wealth. 
+        We’ll also explore how to break the gender pay gap and make confident financial decisions for a secure future.
     """)
 
 elif page == "Success Stories":
     st.title("Inspiring Stories")
     st.write("""
-        1. **Marie Curie**: Pioneering scientist who broke gender barriers and made groundbreaking contributions to science.
-        2. **Malala Yousafzai**: Advocate for girls' education who fought for the right of all children to receive an education.
-        3. **Your Story**: Share your inspiring journey and be a role model for other women around the world.
+        **Marie Curie**: 
+        A pioneering scientist who not only made groundbreaking contributions to science but also defied societal expectations in a male-dominated field. Marie Curie’s resilience and dedication led her to become the first woman to win the Nobel Prize and the only person to win the Nobel Prize in two different scientific fields—Physics and Chemistry. Her story continues to inspire women in STEM fields today.
+
+        **Malala Yousafzai**: 
+        A passionate advocate for girls’ education and the youngest recipient of the Nobel Peace Prize. Malala’s story is one of incredible courage and determination, as she fought for her right to education despite facing grave danger and adversity. Her commitment to improving the lives of girls around the world has made her an icon of resilience and hope.
+
+        **Your Story**: 
+        Every woman has a story of triumph, resilience, and strength. Your experiences—whether in overcoming personal challenges, achieving goals, or breaking societal barriers—are powerful and inspiring. 
+        Share your journey and connect with others who are walking similar paths. By sharing our stories, we support and uplift one another.
     """)
 
 elif page == "Resources":
     st.title("Resources for Help")
     st.write("""
-        - **Mental Health Support**: Learn about organizations and services available to support your mental health.
-        - **Legal Aid**: Discover the legal resources available to women in need of assistance.
-        - **Workshops**: Find events, seminars, and workshops that can help you develop new skills and connect with others.
+        **Mental Health Support**: 
+        Mental health is a critical aspect of overall well-being. This section provides information on mental health services, counseling, support groups, and self-care practices. Whether you're seeking professional help or looking for ways to manage stress, anxiety, or depression, these resources can guide you toward healing and empowerment.
+
+        **Legal Aid**: 
+        Knowing where to turn for legal help is vital for every woman. This section offers guidance on how to access legal resources, including pro bono legal services, organizations that advocate for women’s rights, and advice on how to navigate legal issues such as domestic violence, discrimination, and child custody.
+
+        **Workshops**: 
+        Workshops are a fantastic way to gain new skills, build confidence, and network with other like-minded women. This section highlights upcoming workshops, seminars, and online courses that focus on personal growth, leadership development, and financial literacy. Stay tuned for opportunities to enhance your life and career.
     """)
 
 elif page == "About Us":
     st.title("About Empower Women")
     st.write("""
-        This app was created to educate, inspire, and connect women globally. Our mission is to promote gender equality and empower women in all aspects of life.
-        We aim to break down barriers, provide education, and inspire women to take charge of their futures, one step at a time. Through access to resources, articles, success stories, and a vibrant 
-        community, we hope to make a meaningful impact in the lives of women everywhere.
+        Empower Women is a global initiative created with the goal of educating, inspiring, and connecting women across the world. Our platform is dedicated to promoting gender equality and supporting women in all aspects of their lives, including career development, personal growth, mental health, and social change.
+
+        We understand the importance of access to knowledge, opportunities, and community, which is why we provide resources such as articles, success stories, and practical tools designed to help women overcome barriers and achieve their full potential. 
+        Our mission is to break down the societal limitations that hold women back and create an environment where every woman can thrive and contribute to a more equal world.
+
+        Together, we can uplift one another and build a future where gender equality is not just a dream but a reality. Join us in this important movement as we work to create a world where all women have the resources, support, and opportunities they need to live fulfilling lives.
     """)
 
 # Footer
