@@ -109,11 +109,24 @@ elif page == "Resources":
 
 elif page == "About Us":
     st.title("About She Elevates")
-    st.write(""" 
+    st.write("""
         She Elevates is a platform created with the vision of empowering women across the globe. We strive to create
         a world where women feel supported, educated, and inspired. Our mission is to provide valuable resources,
         share inspiring stories, and foster an environment where women can lead, achieve, and thrive.
-        """)
+
+        **Our Mission:**
+        To empower women with the knowledge, skills, and resources they need to live fulfilling and successful lives.
+        By providing educational content, legal advice, financial resources, and mental health support, we aim to
+        create a more equal and just world for women.
+
+        **Why We Do It:**
+        Empowering women means creating a world where women have equal opportunities to succeed, make choices, and
+        contribute to society in meaningful ways. Through She Elevates, we hope to inspire a global movement where
+        women support and uplift each other.
+
+        Join us in making the world a better place for women everywhere!
+    """)
+
 
 # Footer
 st.sidebar.write("Made with ❤️ using Streamlit")
