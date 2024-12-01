@@ -96,7 +96,33 @@ elif page == "Articles":
           choices, invest in your future, and live life on your own terms. We offer actionable steps, resources, and
           advice to help you achieve financial security, from budgeting tips to investment strategies.
           [Read More: Financial Independence](https://www.investopedia.com/financial-literacy-for-women-5182212)
+
+        - **Overcoming Gender Bias**: Gender bias is still a significant challenge in many aspects of life, especially in
+          professional settings. Learn about strategies to combat unconscious bias, promote equality, and help break
+          down barriers that hold women back.
+          [Read More: Overcoming Gender Bias](https://www.womenforwomen.org/learn/gender-bias)
+
+        - **Work-Life Balance**: Achieving work-life balance can be particularly challenging for women, especially in high
+          demanding jobs or family settings. In this article, we provide tips for managing work, personal life, and
+          self-care to ensure long-term well-being.
+          [Read More: Work-Life Balance](https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/02/23/five-strategies-for-improving-your-work-life-balance/?sh=65eb6c9a6f4e)
+
+        - **Breaking the Glass Ceiling**: The glass ceiling is a term used to describe the invisible barriers that prevent
+          women from advancing to the highest levels in their careers. This article discusses how women can break these
+          barriers and reach their full potential.
+          [Read More: Breaking the Glass Ceiling](https://www.mckinsey.com/featured-insights/gender-equality/why-women-are-still-underrepresented-in-leadership-positions)
+
+        - **Self-Care for Women**: Self-care is not selfish; it’s essential. Women often take on many roles, and it can be
+          easy to forget about personal well-being. This article highlights the importance of self-care, offering tips on
+          physical, mental, and emotional health.
+          [Read More: Self-Care for Women](https://www.psychologytoday.com/us/basics/self-care)
+
+        - **Building a Support Network**: A strong support network is essential for personal and professional growth. Learn
+          how to build relationships with mentors, colleagues, and other women who can offer support, advice, and
+          encouragement.
+          [Read More: Building a Support Network](https://www.inc.com/guides/2010/06/defining-your-support-system.html)
     """)
+    
 elif page == "Resources":
     st.title("Resources for Help")
     st.write(""" 
