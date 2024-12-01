@@ -287,18 +287,5 @@ elif page == "About Us":
     st.write(f"Total Pledges Made: {random.randint(100, 1000)}")
     st.write(f"Total Empowerment Quiz Scores: {random.randint(500, 5000)}")
 
-    # Test Your Knowledge Quiz
-    st.subheader("Test Your Knowledge: Women's Rights")
-    st.write("How many countries have laws on gender-based violence?")
-    answer = st.radio(
-        "Select your answer:",
-        ("Less than 50", "50-100", "More than 100")
-    )
-    
-    if answer == "More than 100":
-        st.success("Correct! Over 100 countries now have laws addressing gender-based violence.")
-    elif answer != "":
-        st.error("Incorrect. The correct answer is 'More than 100'.")
-        
 # Footer
 st.sidebar.write("Made with ❤️ using Streamlit")
