@@ -161,5 +161,54 @@ elif page == "About Us":
         their full potential.
     """)
 
+    # Interactive Poll
+    st.subheader("What Matters Most to You in Women's Empowerment?")
+    empowerment_choice = st.radio(
+        "Select one or more options that matter most to you:",
+        ("Leadership", "Financial Independence", "Legal Rights", "Mental Health Support", "Education", "Community Support")
+    )
+    st.write(f"You chose: {empowerment_choice}. Your input helps us understand what matters most to the women in our community.")
+    
+    # Quote of the Day
+    st.subheader("Quote of the Day")
+    quotes = [
+        "“There is no limit to what we, as women, can accomplish.” – Michelle Obama",
+        "“I am not free while any woman is unfree, even when her shackles are very different from my own.” – Audre Lorde",
+        "“A woman with a voice is, by definition, a strong woman.” – Melinda Gates",
+        "“The most courageous act is still to think for yourself. Aloud.” – Coco Chanel"
+    ]
+    st.write(random.choice(quotes))
+
+    # Empowerment Pledge (Users can make a commitment)
+    st.subheader("Make Your Empowerment Pledge")
+    pledge = st.text_input("What pledge would you like to make in the fight for women's rights?")
+    if st.button("Submit Pledge"):
+        if pledge:
+            st.success(f"Thank you for your pledge: '{pledge}'! Together, we can make a difference.")
+        else:
+            st.error("Please enter your pledge before submitting.")
+
+    # Impact Tracker
+    st.subheader("Track Our Collective Impact")
+    st.write("""
+        Every time you interact with She Elevates, you contribute to a growing movement of empowerment. Together, we
+        can inspire change and create opportunities for women everywhere. Here's how you are making an impact:
+    """)
+    st.write(f"Total Pledges Made: {random.randint(100, 1000)}")
+    st.write(f"Total Empowerment Quiz Scores: {random.randint(500, 5000)}")
+
+    # Test Your Knowledge Quiz
+    st.subheader("Test Your Knowledge: Women's Rights")
+    st.write("How many countries have laws on gender-based violence?")
+    answer = st.radio(
+        "Select your answer:",
+        ("Less than 50", "50-100", "More than 100")
+    )
+    
+    if answer == "More than 100":
+        st.success("Correct! Over 100 countries now have laws addressing gender-based violence.")
+    elif answer != "":
+        st.error("Incorrect. The correct answer is 'More than 100'.")
+        
 # Footer
 st.sidebar.write("Made with ❤️ using Streamlit")
