@@ -31,13 +31,27 @@ if "stories" not in st.session_state:
 # Pages
 if page == "Home":
     st.title("Welcome to She Elevates!")
-    st.write(""" 
+    st.write("""
         This app provides resources, stories, and insights to empower women worldwide. Our goal is to
         inspire and educate, fostering an environment where women can thrive in all aspects of life. Whether
         you're looking to build leadership skills, understand your rights, or connect with other women, you're
         in the right place.
-        """)
-    
+
+        **What We Offer:**
+        - **Leadership Skills:** Whether you're starting your career or looking to enhance your leadership abilities,
+          we provide resources to help you lead with confidence.
+        - **Know Your Rights:** Understanding your rights is the first step to securing your safety and well-being.
+          Our articles help you navigate the complexities of your legal rights.
+        - **Financial Independence:** Achieving financial independence is empowering, and we share tips and guidance
+          to help you take control of your finances.
+        - **Inspiring Stories:** Read empowering stories from women who have overcome challenges, broken barriers,
+          and made a difference. These stories serve as a source of inspiration for all.
+        
+        **Join Us!**
+        Empowerment is not just about knowledge, but about community. Join other women in this journey of
+        self-discovery, leadership, and resilience. Together, we rise.
+    """)
+
     # Button to share a story
     st.subheader("Share Your Story")
     user_story = st.text_area("What's your empowering story?", placeholder="Type your story here...")
@@ -45,10 +59,10 @@ if page == "Home":
     if st.button("Submit Story"):
         if user_story:
             st.session_state.stories.append(user_story)
-            save_stories(st.session_state.stories)  # Save stories to file
             st.success("Thank you for sharing your story! It will appear in the Success Stories tab.")
         else:
             st.error("Please write your story before submitting.")
+
 
 elif page == "Success Stories":
     st.title("Inspiring Success Stories")
