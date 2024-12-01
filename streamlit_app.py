@@ -1,19 +1,17 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
-import requests
+import json
 
 # Set page config as the first Streamlit command
 st.set_page_config(page_title="Empowering Women", layout="wide")
 
-# Load Lottie animation (example from an external source)
-def load_lottie_url(url:str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+# Load Lottie animation from a local file
+def load_lottie_local(filepath: str):
+    with open(filepath, "r") as file:
+        return json.load(file)
 
-# Example Lottie animation URL (replace with your actual URL)
-lottie_welcome = load_lottie_url("https://assets3.lottiefiles.com/packages/lf20_MlOtA4.json")
+# Load your local Lottie animation
+lottie_welcome = load_lottie_local("lottie_welcome.json")  # replace with your file path
 
 # Sidebar navigation
 st.sidebar.title("Navigate")
