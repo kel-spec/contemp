@@ -1,1 +1,8 @@
 streamlit
+Pillow
+streamlit-lottie
+requests
+beautifulsoup4
+matplotlib
+seaborn
+plotly
