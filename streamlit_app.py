@@ -288,4 +288,4 @@ elif page == "About Us":
     st.write(f"Total Empowerment Quiz Scores: {random.randint(500, 5000)}")
 
 # Footer
-st.sidebar.write("Made with ❤️ using Streamlit")
+st.sidebar.write("Made by Michael Lagunday & Lance Salamanca submitted to GEC003 - Contemporary World")
