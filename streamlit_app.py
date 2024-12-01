@@ -291,22 +291,22 @@ elif page == "About Us":
 st.sidebar.markdown("""
     <style>
         .sidebar .sidebar-content {
-            background-color: #f4f4f9;  /* Light background */
+            background-color: #f4f4f9;  
             padding: 20px;
         }
         .title {
             font-size: 20px;
             font-weight: bold;
-            color: #4B8F29;  /* Green color for emphasis */
+            color: #424874;  
         }
         .authors {
             font-size: 16px;
-            font-style: italic;
-            color: #4B8F29;
+            font-style: monospace;
+            color: #424874;
         }
         .course {
             font-size: 14px;
-            color: #444444;
+            color: #424874;
             margin-top: 5px;
         }
     </style>
