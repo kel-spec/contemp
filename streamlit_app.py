@@ -288,4 +288,32 @@ elif page == "About Us":
     st.write(f"Total Empowerment Quiz Scores: {random.randint(500, 5000)}")
 
 # Footer
-st.sidebar.write("Made by Michael Lagunday & Lance Salamanca submitted to GEC003 - Contemporary World")
+st.sidebar.markdown("""
+    <style>
+        .sidebar .sidebar-content {
+            background-color: #f4f4f9;  /* Light background */
+            padding: 20px;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4B8F29;  /* Green color for emphasis */
+        }
+        .authors {
+            font-size: 16px;
+            font-style: italic;
+            color: #4B8F29;
+        }
+        .course {
+            font-size: 14px;
+            color: #444444;
+            margin-top: 5px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Stylish message in the sidebar
+st.sidebar.markdown("""
+    <div class="title">Made by <strong>Michael Lagunday</strong> & <strong>Lance Salamanca</strong></div>
+    <div class="authors">Submitted to GEC003 - Contemporary World</div>
+""", unsafe_allow_html=True)
