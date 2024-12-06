@@ -17,7 +17,7 @@ if page == "Home":
     st.title("Welcome to She Elevates!")
     
     # Add an introductory banner image or header
-    st.image("https://via.placeholder.com/1200x400?text=Empowering+Women+Worldwide", caption="Empowerment in Action", use_column_width=True)
+    st.image("https://www.cloud-awards.com/wp-content/uploads/2024/03/AdobeStock_415181377-scaled.jpeg", caption="Empowerment in Action", use_column_width=True)
     
     st.write("""
         Welcome to She Elevates, a platform designed to empower and support women worldwide. Our mission is to provide 
@@ -35,7 +35,7 @@ if page == "Home":
 
     # Add a video section for user engagement
     st.subheader("Get Inspired")
-    st.video("https://www.youtube.com/watch?v=1y9E88_PpWg")  # Replace with a relevant empowerment video
+    st.video("https://youtu.be/VF4ZyJRUxk8")  # Replace with a relevant empowerment video
 
     # Story-sharing interactive feature
     st.subheader("Share Your Story")
