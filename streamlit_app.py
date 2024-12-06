@@ -63,48 +63,68 @@ if page == "Home":
     st.button("Explore Articles", on_click=lambda: st.experimental_set_query_params(page="Articles"))
     
 elif page == "Articles":
-    st.title("Educational Articles")
+    st.title("Explore Empowering Articles")
+
+    # Add a banner image for the Articles page
+    st.image("https://via.placeholder.com/1200x400?text=Articles+to+Empower", caption="Stay Informed, Stay Empowered", use_column_width=True)
+
     st.write("""
-        - *Leadership Skills*: Building leadership skills is essential for women who want to take charge of their
-          careers and lives. Our article provides insights on developing leadership qualities, managing teams,
-          and staying resilient in the face of challenges. These are the skills that will set you apart in any field.
-          [Read More: Leadership Skills](https://www.forbes.com/sites/forbeshumanresourcescouncil/2020/01/28/five-essential-leadership-skills-every-woman-should-develop/?sh=167a2ff34b93)
-
-        - *Know Your Rights*: Knowledge is power. Understanding your rights in different contexts, from the workplace
-          to personal matters, is key to maintaining control over your life. In this section, we explore the importance
-          of legal awareness and how knowing your rights can safeguard you against potential challenges.
-          [Read More: Know Your Rights](https://www.aclu.org/issues/womens-rights)
-
-        - *Financial Independence*: Financial independence is crucial for women, as it provides the freedom to make
-          choices, invest in your future, and live life on your own terms. We offer actionable steps, resources, and
-          advice to help you achieve financial security, from budgeting tips to investment strategies.
-          [Read More: Financial Independence](https://www.investopedia.com/financial-literacy-for-women-5182212)
-
-        - *Overcoming Gender Bias*: Gender bias is still a significant challenge in many aspects of life, especially in
-          professional settings. Learn about strategies to combat unconscious bias, promote equality, and help break
-          down barriers that hold women back.
-          [Read More: Overcoming Gender Bias](https://www.womenforwomen.org/learn/gender-bias)
-
-        - *Work-Life Balance*: Achieving work-life balance can be particularly challenging for women, especially in high
-          demanding jobs or family settings. In this article, we provide tips for managing work, personal life, and
-          self-care to ensure long-term well-being.
-          [Read More: Work-Life Balance](https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/02/23/five-strategies-for-improving-your-work-life-balance/?sh=65eb6c9a6f4e)
-
-        - *Breaking the Glass Ceiling*: The glass ceiling is a term used to describe the invisible barriers that prevent
-          women from advancing to the highest levels in their careers. This article discusses how women can break these
-          barriers and reach their full potential.
-          [Read More: Breaking the Glass Ceiling](https://www.mckinsey.com/featured-insights/gender-equality/why-women-are-still-underrepresented-in-leadership-positions)
-
-        - *Self-Care for Women*: Self-care is not selfish; it’s essential. Women often take on many roles, and it can be
-          easy to forget about personal well-being. This article highlights the importance of self-care, offering tips on
-          physical, mental, and emotional health.
-          [Read More: Self-Care for Women](https://www.psychologytoday.com/us/basics/self-care)
-
-        - *Building a Support Network*: A strong support network is essential for personal and professional growth. Learn
-          how to build relationships with mentors, colleagues, and other women who can offer support, advice, and
-          encouragement.
-          [Read More: Building a Support Network](https://www.inc.com/guides/2010/06/defining-your-support-system.html)
+        Dive into a collection of articles designed to educate, inspire, and empower. Explore topics ranging 
+        from leadership to financial independence, and discover insights to elevate your journey.
     """)
+
+    # Add collapsible categories for easier navigation
+    st.subheader("Browse Categories")
+    with st.expander("Leadership Skills"):
+        st.write("""
+            Learn about strategies to develop confidence, lead teams effectively, and grow as a professional leader.
+            - [Breaking the Glass Ceiling](#)
+            - [Overcoming Workplace Bias](#)
+            - [Top Leadership Books for Women](#)
+        """)
+    with st.expander("Know Your Rights"):
+        st.write("""
+            Stay informed about your rights and navigate personal and professional challenges confidently.
+            - [Understanding Workplace Rights](#)
+            - [Legal Support for Women](#)
+            - [Feminist Movements to Know](#)
+        """)
+    with st.expander("Financial Independence"):
+        st.write("""
+            Master your finances with practical advice tailored for women.
+            - [Building a Sustainable Budget](#)
+            - [Smart Investment Strategies](#)
+            - [Emergency Fund Essentials](#)
+        """)
+
+    # Highlight featured articles with images
+    st.subheader("Featured Articles")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.image("https://via.placeholder.com/300x200?text=Leadership+Tips", caption="5 Tips to Elevate Your Leadership Skills")
+        st.button("Read Article", key="article1")
+    
+    with col2:
+        st.image("https://via.placeholder.com/300x200?text=Financial+Guide", caption="Financial Freedom: A Guide for Women")
+        st.button("Read Article", key="article2")
+
+    # Search bar for article filtering
+    st.subheader("Find an Article")
+    search_query = st.text_input("Search articles by keyword", placeholder="Type here...")
+    if search_query:
+        st.write(f"Search results for: **{search_query}**")  # Placeholder for search results functionality
+
+    # Feedback collection for articles
+    st.subheader("Your Thoughts Matter")
+    st.write("We value your feedback. Let us know how these articles help you or suggest topics you'd like to see.")
+    feedback = st.text_area("Write your feedback here...", placeholder="Share your thoughts...")
+    if st.button("Submit Feedback"):
+        if feedback:
+            st.success("Thank you for your feedback! Your input helps us grow.")
+        else:
+            st.error("Please enter your feedback before submitting.")
+
 elif page == "Success Stories":
     st.title("Inspiring Success Stories")
     st.write("""
