@@ -1,158 +1,131 @@
 import streamlit as st
 import random
 
-# Set up the app title and sidebar
-st.set_page_config(page_title="She Elevates", layout="wide", page_icon="🌟")
+# Set up the app title and custom layout
+st.set_page_config(page_title="She Elevates", layout="wide")
 
-# Custom CSS for aesthetics
+# Apply custom styles for aesthetics
 st.markdown("""
     <style>
-        body {
-            background-color: #f9f7fc;
-        }
-        .title {
-            font-family: 'Helvetica', sans-serif;
-            font-size: 40px;
-            color: #4c1d95;  
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .quote {
-            font-style: italic;
-            font-size: 20px;
-            text-align: center;
-            color: #6d28d9;
-        }
-        .footer {
-            font-size: 12px;
-            text-align: center;
-            color: #9ca3af;
-        }
-        .btn {
-            background-color: #6d28d9;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background-color: #4c1d95;
-        }
-        .success-story {
-            background-color: #e0e7ff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
+    body {
+        font-family: 'Verdana', sans-serif;
+        background-color: #f7f8fa;
+        color: #424874;
+    }
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #2e2e54;
+        margin-bottom: 15px;
+    }
+    .subsection-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #424874;
+    }
+    .content {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .sidebar {
+        background-color: #fafafa;
+        padding: 20px;
+    }
+    .st-expander {
+        background-color: #ffffff;
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
     </style>
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
-st.sidebar.title("🌟 Navigate")
-page = st.sidebar.radio("Go to", ["Home", "Articles", "Success Stories", "Resources", "Community", "About Us"])
+st.sidebar.title("Navigate")
+page = st.sidebar.radio("Go to", ["Home", "Learn", "Success Stories", "Resources", "About Us"])
 
-# Store user pledges and quiz scores (for simplicity, in session state)
+# Story storage
 if "stories" not in st.session_state:
     st.session_state.stories = []
-if "pledges" not in st.session_state:
-    st.session_state.pledges = []
-if "quiz_scores" not in st.session_state:
-    st.session_state.quiz_scores = []
 
-# Pages
 if page == "Home":
-    st.markdown('<div class="title">Welcome to She Elevates!</div>', unsafe_allow_html=True)
+    st.markdown("<div class='title'>Welcome to She Elevates!</div>", unsafe_allow_html=True)
     st.write("""
-        🌟 Empowering women worldwide through education, inspiration, and community engagement. Let's rise together!
+        She Elevates is a platform dedicated to empowering women through knowledge, community, and inspiration. 
+        Explore resources, connect with stories of resilience, and take the first step toward self-empowerment. 
+        Together, let's rise to new heights!
     """)
+    st.markdown("---")
 
-    # Quote of the Day
-    st.markdown('<div class="quote">"Empowered women empower the world." – Unknown</div>', unsafe_allow_html=True)
-
-    # Daily Empowerment Challenge
-    challenges = [
-        "Write down 3 things you're grateful for today.",
-        "Read an article from our resources section.",
-        "Share an empowering story with a friend.",
-        "Set a small goal to achieve today.",
-        "Compliment another woman today."
-    ]
-    st.subheader("🌟 Daily Challenge")
-    st.write(random.choice(challenges))
-
-elif page == "Articles":
-    st.title("📚 Educational Articles")
-    st.write("""
-        Discover articles on leadership, financial independence, and overcoming societal barriers.
-        [Visit our curated list of articles](#resources).
-    """)
-
-elif page == "Success Stories":
-    st.title("💪 Inspiring Success Stories")
-    st.write("Celebrate the achievements of incredible women.")
-
-    # Display user-submitted stories
-    if st.session_state.stories:
-        for idx, story in enumerate(st.session_state.stories):
-            st.markdown(f'<div class="success-story"><strong>Story {idx + 1}:</strong> {story}</div>', unsafe_allow_html=True)
-    else:
-        st.write("No stories yet. Be the first to share your empowering story!")
-
-    # Share your story
-    st.subheader("📝 Share Your Story")
-    user_story = st.text_area("What's your empowering story?", placeholder="Type your story here...")
+    st.markdown("<div class='subsection-title'>Share Your Story</div>", unsafe_allow_html=True)
+    user_story = st.text_area("What empowering story would you like to share?", placeholder="Type your story here...")
     if st.button("Submit Story"):
-        if user_story:
-            st.session_state.stories.append(user_story)
-            st.success("Thank you for sharing your story! It will appear above.")
+        if user_story.strip():
+            st.session_state.stories.append(user_story.strip())
+            st.success("Thank you for sharing your story! It will appear in the Success Stories section.")
         else:
             st.error("Please write your story before submitting.")
 
-elif page == "Resources":
-    st.title("🔗 Resources for Empowerment")
-    st.write("""
-        A curated list of books, courses, and organizations to inspire and support you.
-    """)
+elif page == "Learn":
+    st.markdown("<div class='title'>Educational Articles</div>", unsafe_allow_html=True)
+    st.write("Expand the topics below to learn more.")
 
-elif page == "Community":
-    st.title("🤝 Community Engagement")
-    st.write("Join challenges, take quizzes, and share pledges.")
+    with st.expander("Leadership Skills"):
+        st.write("""
+            Developing leadership skills is key for women to excel in their personal and professional lives. Learn 
+            strategies to build confidence, manage teams, and navigate challenges.
+            """)
+        st.write("[Read Full Article](https://www.forbes.com/sites/forbeshumanresourcescouncil/2020/01/28/five-essential-leadership-skills-every-woman-should-develop/?sh=167a2ff34b93)")
 
-    # Quiz
-    st.subheader("📝 Empowerment Quiz")
-    question = "Which leadership quality resonates with you the most?"
-    options = ["Empathy", "Confidence", "Vision", "Resilience"]
-    choice = st.radio(question, options)
-    if st.button("Submit Quiz Answer"):
-        st.session_state.quiz_scores.append(choice)
-        st.success(f"Thank you for participating! You chose: {choice}.")
+    with st.expander("Know Your Rights"):
+        st.write("""
+            Empower yourself by understanding your rights in areas such as workplace equality, safety, and legal protections.
+            """)
+        st.write("[Learn More](https://www.aclu.org/issues/womens-rights)")
 
-    # Pledges
-    st.subheader("🌟 Make Your Empowerment Pledge")
-    pledge = st.text_input("What pledge would you like to make?")
-    if st.button("Submit Pledge"):
-        if pledge:
-            st.session_state.pledges.append(pledge)
-            st.success(f"Thank you for your pledge: '{pledge}'!")
-        else:
-            st.error("Please enter your pledge before submitting.")
+    with st.expander("Financial Independence"):
+        st.write("""
+            Gain control of your finances with budgeting tips, investment strategies, and advice on long-term financial planning.
+            """)
+        st.write("[Explore Financial Tips](https://www.investopedia.com/financial-literacy-for-women-5182212)")
 
-    # Display pledges
-    st.write("💬 **Recent Pledges:**")
-    if st.session_state.pledges:
-        for idx, p in enumerate(st.session_state.pledges[-5:], 1):
-            st.write(f"{idx}. {p}")
+elif page == "Success Stories":
+    st.markdown("<div class='title'>Inspiring Success Stories</div>", unsafe_allow_html=True)
+    if st.session_state.stories:
+        for idx, story in enumerate(st.session_state.stories):
+            st.write(f"**Story {idx + 1}:** {story}")
     else:
-        st.write("No pledges yet. Be the first to make one!")
+        st.write("No stories yet. Be the first to share your empowering journey!")
+
+elif page == "Resources":
+    st.markdown("<div class='title'>Resources for Empowerment</div>", unsafe_allow_html=True)
+    st.write("Expand the sections below to access books, courses, and organizations dedicated to empowering women.")
+
+    with st.expander("Books for Empowerment"):
+        st.write("""
+        - **Lean In** by Sheryl Sandberg: A guide to achieving leadership and breaking barriers in the workplace.
+        - **The Moment of Lift** by Melinda Gates: Insights on the transformative power of empowering women globally.
+        """)
+
+    with st.expander("Courses & Learning Platforms"):
+        st.write("""
+        - [Coursera - Women in Leadership](https://www.coursera.org/learn/women-leadership): Develop skills to lead in any industry.
+        - [Udemy - Financial Literacy for Women](https://www.udemy.com/course/financial-literacy-for-women/): Learn to take charge of your financial future.
+        """)
 
 elif page == "About Us":
-    st.title("💡 About She Elevates")
+    st.markdown("<div class='title'>About She Elevates</div>", unsafe_allow_html=True)
     st.write("""
-        Empowering women to achieve their fullest potential through education and community support.
+        She Elevates is more than a platform; it's a movement dedicated to uplifting women worldwide. Through education, 
+        inspiration, and community, we aim to help women unlock their full potential.
     """)
-
-    # Team Acknowledgment
-    st.write("**Team:** Michael Lagunday & Lance Salamanca")
+    st.markdown("---")
+    st.markdown("<div class='subsection-title'>Mission</div>", unsafe_allow_html=True)
+    st.write("""
+        Our mission is to empower women through actionable resources and a supportive network that fosters growth, 
+        resilience, and leadership.
+    """)
+    st.markdown("<div class='subsection-title'>Impact Tracker</div>", unsafe_allow_html=True)
+    st.write(f"Pledges Taken: {random.randint(100, 1000)}")
+    st.write(f"Stories Shared: {len(st.session_state.stories)}")
