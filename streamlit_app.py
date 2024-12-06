@@ -60,8 +60,12 @@ if page == "Home":
     
     # CTA button to explore the platform further
     st.write("Ready to start your journey with us?")
-    st.button("Explore Articles", on_click=lambda: st.experimental_set_query_params(page="Articles"))
     
+    # When the button is clicked, the query params will be set to 'Articles', and the page will load the Articles content
+    if st.button("Explore Articles"):
+        st.experimental_set_query_params(page="Articles")  # Set the query params to 'Articles'
+        st.experimental_rerun()  # Reload the app to reflect the updated query params
+        
 elif page == "Articles":
     st.title("Explore Empowering Articles")
 
