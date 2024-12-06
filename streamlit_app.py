@@ -152,7 +152,7 @@ elif page == "Resources":
     """)
 
     # Books Section - Collapsible
-    with st.expander("Books for Empowerment"):
+    with st.expander("📚 Books for Empowerment"):
         st.write("""
             Explore these insightful books that discuss women's empowerment, leadership, financial independence, and more.
         """)
@@ -169,7 +169,7 @@ elif page == "Resources":
             st.write(description)
     
     # Websites Section - Collapsible
-    with st.expander("Websites for Support and Resources"):
+    with st.expander("🌐 Websites for Support and Resources"):
         st.write("""
             These websites offer valuable resources, advocacy, and education about women's rights, health, and empowerment.
         """)
@@ -186,7 +186,7 @@ elif page == "Resources":
             st.write(description)
     
     # Non-Profit Organizations Section - Collapsible
-    with st.expander("Non-Profit Organizations Supporting Women"):
+    with st.expander("🤝 Non-Profit Organizations Supporting Women"):
         st.write("""
             These non-profits focus on advocacy, education, and empowerment, providing essential services to women in need.
         """)
@@ -203,7 +203,7 @@ elif page == "Resources":
             st.write(description)
 
     # Online Courses Section - Collapsible
-    with st.expander("Online Courses and Learning Platforms"):
+    with st.expander("💻 Online Courses and Learning Platforms"):
         st.write("""
             The following platforms offer courses and resources designed to empower women by providing the skills and knowledge
             needed to succeed in various fields.
@@ -221,7 +221,7 @@ elif page == "Resources":
             st.write(description)
 
     # Videos and Documentaries Section - Collapsible
-    with st.expander("Inspirational Videos and Documentaries"):
+    with st.expander("🎥 Inspirational Videos and Documentaries"):
         st.write("""
             Watch these empowering videos and documentaries that feature the stories of women overcoming challenges, breaking barriers,
             and leading the way for gender equality.
@@ -239,7 +239,7 @@ elif page == "Resources":
             st.write(description)
 
     # Articles Section - Collapsible
-    with st.expander("Articles and Blogs"):
+    with st.expander("📰 Articles and Blogs"):
         st.write("""
             These articles and blogs provide the latest news, opinions, and insights on women's rights, gender equality, and empowerment.
         """)
