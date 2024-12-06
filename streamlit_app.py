@@ -77,27 +77,27 @@ elif page == "Articles":
     st.subheader("Browse Categories")
 
     with st.expander("Leadership Skills"):
-    st.write("""
-        Learn about strategies to develop confidence, lead teams effectively, and grow as a professional leader.
-        - [Breaking the Glass Ceiling](https://www.inc.com/guides/2010/06/defining-your-leadership-style.html)
-        - [Overcoming Workplace Bias](https://www.mckinsey.com/featured-insights/diversity-and-inclusion/why-diversity-matters)
-        - [Top Leadership Books for Women](https://www.amazon.com/Best-Sellers-Books-Leadership-Development/zgbs/books/2646)
+        st.write("""
+            Learn about strategies to develop confidence, lead teams effectively, and grow as a professional leader.
+            - [Breaking the Glass Ceiling](https://www.inc.com/guides/2010/06/defining-your-leadership-style.html)
+            - [Overcoming Workplace Bias](https://www.mckinsey.com/featured-insights/diversity-and-inclusion/why-diversity-matters)
+            - [Top Leadership Books for Women](https://www.amazon.com/Best-Sellers-Books-Leadership-Development/zgbs/books/2646)
     """)
 
     with st.expander("Know Your Rights"):
-    st.write("""
-        Stay informed about your rights and navigate personal and professional challenges confidently.
-        - [Understanding Workplace Rights](https://www.eeoc.gov/what-you-should-know-about-workplace-rights)
-        - [Legal Support for Women](https://www.nwlc.org/our-issues/)
-        - [Feminist Movements to Know](https://www.theguardian.com/world/2019/jul/16/feminism-global-activism-gender-equality)
+        st.write("""
+            Stay informed about your rights and navigate personal and professional challenges confidently.
+            - [Understanding Workplace Rights](https://www.eeoc.gov/what-you-should-know-about-workplace-rights)
+            - [Legal Support for Women](https://www.nwlc.org/our-issues/)
+            - [Feminist Movements to Know](https://www.theguardian.com/world/2019/jul/16/feminism-global-activism-gender-equality)
     """)
 
     with st.expander("Financial Independence"):
-    st.write("""
-        Master your finances with practical advice tailored for women.
-        - [Building a Sustainable Budget](https://www.investopedia.com/articles/personal-finance/050515/how-create-budget-you-can-stick.asp)
-        - [Smart Investment Strategies](https://www.investopedia.com/articles/financial-advisors/122215/7-best-investment-strategies-women.asp)
-        - [Emergency Fund Essentials](https://www.forbes.com/advisor/personal-finance/how-to-build-an-emergency-fund/)
+        st.write("""
+            Master your finances with practical advice tailored for women.
+            - [Building a Sustainable Budget](https://www.investopedia.com/articles/personal-finance/050515/how-create-budget-you-can-stick.asp)
+            - [Smart Investment Strategies](https://www.investopedia.com/articles/financial-advisors/122215/7-best-investment-strategies-women.asp)
+            - [Emergency Fund Essentials](https://www.forbes.com/advisor/personal-finance/how-to-build-an-emergency-fund/)
     """)
 
     # Highlight featured articles with links
