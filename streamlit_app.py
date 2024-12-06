@@ -343,7 +343,6 @@ st.sidebar.markdown("""
 # Stylish message in the sidebar
 with st.sidebar.expander("Developers"):
     st.markdown("""
-    ### Creators:
     - **Michael Lagunday**  
     - **Lance Salamanca**  
     
