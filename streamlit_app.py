@@ -74,7 +74,7 @@ elif page == "Articles":
     """)
 
     # Add collapsible categories for easier navigation
-   st.subheader("Browse Categories")
+    st.subheader("Browse Categories")
 
     with st.expander("Leadership Skills"):
     st.write("""
