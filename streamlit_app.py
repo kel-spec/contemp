@@ -66,7 +66,7 @@ elif page == "Articles":
     st.title("Explore Empowering Articles")
 
     # Add a banner image for the Articles page
-    st.image("https://via.placeholder.com/1200x400?text=Articles+to+Empower", caption="Stay Informed, Stay Empowered", use_column_width=True)
+    st.image("https://www.stackumbrella.com/wp-content/uploads/2024/07/Women-Empowerment_11zon.jpg", caption="Stay Informed, Stay Empowered", use_column_width=True)
 
     st.write("""
         Dive into a collection of articles designed to educate, inspire, and empower. Explore topics ranging 
