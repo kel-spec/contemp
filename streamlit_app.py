@@ -76,7 +76,7 @@ elif page == "Articles":
     # Add collapsible categories for easier navigation
    st.subheader("Browse Categories")
 
-with st.expander("Leadership Skills"):
+    with st.expander("Leadership Skills"):
     st.write("""
         Learn about strategies to develop confidence, lead teams effectively, and grow as a professional leader.
         - [Breaking the Glass Ceiling](https://www.inc.com/guides/2010/06/defining-your-leadership-style.html)
@@ -84,7 +84,7 @@ with st.expander("Leadership Skills"):
         - [Top Leadership Books for Women](https://www.amazon.com/Best-Sellers-Books-Leadership-Development/zgbs/books/2646)
     """)
 
-with st.expander("Know Your Rights"):
+    with st.expander("Know Your Rights"):
     st.write("""
         Stay informed about your rights and navigate personal and professional challenges confidently.
         - [Understanding Workplace Rights](https://www.eeoc.gov/what-you-should-know-about-workplace-rights)
@@ -92,7 +92,7 @@ with st.expander("Know Your Rights"):
         - [Feminist Movements to Know](https://www.theguardian.com/world/2019/jul/16/feminism-global-activism-gender-equality)
     """)
 
-with st.expander("Financial Independence"):
+    with st.expander("Financial Independence"):
     st.write("""
         Master your finances with practical advice tailored for women.
         - [Building a Sustainable Budget](https://www.investopedia.com/articles/personal-finance/050515/how-create-budget-you-can-stick.asp)
