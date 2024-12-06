@@ -1,8 +1,9 @@
 import streamlit as st
 import random
 
-# Set up the app title and sidebar
+query_params = st.experimental_get_query_params()
 st.set_page_config(page_title="She Elevates", layout="wide")
+page = query_params.get("page", ["Home"])[0]
 
 # Sidebar navigation
 st.sidebar.title("Navigate")
@@ -61,10 +62,9 @@ if page == "Home":
     # CTA button to explore the platform further
     st.write("Ready to start your journey with us?")
     
-    # When the button is clicked, the query params will be set to 'Articles', and the page will load the Articles content
+    # When the button is clicked, set the query params to 'Articles'
     if st.button("Explore Articles"):
         st.experimental_set_query_params(page="Articles")  # Set the query params to 'Articles'
-        st.experimental_rerun()  # Reload the app to reflect the updated query params
         
 elif page == "Articles":
     st.title("Explore Empowering Articles")
