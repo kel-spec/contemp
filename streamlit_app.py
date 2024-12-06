@@ -109,12 +109,6 @@ elif page == "Articles":
         st.image("https://media.licdn.com/dms/image/v2/D5612AQEUFRgI--hEtg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1730472147640?e=2147483647&v=beta&t=geFR7XCLgWoTd0MYszLKVz7QazKokK7Yj8Lz8Brr2Os", caption="Financial Freedom: A Guide for Women")
         st.markdown("[Read Article](https://globalwomanmagazine.com/your-guide-to-financial-freedom/)", unsafe_allow_html=True)
 
-    # Search bar for article filtering
-    st.subheader("Find an Article")
-    search_query = st.text_input("Search articles by keyword", placeholder="Type here...")
-    if search_query:
-        st.write(f"Search results for: **{search_query}**")  # Placeholder for search results functionality
-
     # Feedback collection for articles
     st.subheader("Your Thoughts Matter")
     st.write("We value your feedback. Let us know how these articles help you or suggest topics you'd like to see.")
