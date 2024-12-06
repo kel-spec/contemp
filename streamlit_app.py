@@ -1,9 +1,8 @@
 import streamlit as st
 import random
 
-query_params = st.experimental_get_query_params()
 st.set_page_config(page_title="She Elevates", layout="wide")
-page = query_params.get("page", ["Home"])[0]
+
 
 # Sidebar navigation
 st.sidebar.title("Navigate")
@@ -63,8 +62,7 @@ if page == "Home":
     st.write("Ready to start your journey with us?")
     
     # When the button is clicked, set the query params to 'Articles'
-    if st.button("Explore Articles"):
-        st.experimental_set_query_params(page="Articles")  # Set the query params to 'Articles'
+    if st.button("Generate Words to Empower"):
         
 elif page == "Articles":
     st.title("Explore Empowering Articles")
