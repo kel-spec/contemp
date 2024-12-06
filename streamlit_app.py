@@ -345,3 +345,13 @@ st.sidebar.markdown("""
     <div class="title">Made by <strong>Michael Lagunday</strong> & <strong>Lance Salamanca</strong></div>
     <div class="authors">Submitted to GEC003 - Contemporary World</div>
 """, unsafe_allow_html=True)
+
+# Create the collapsible section
+with st.sidebar.expander("Authors"):
+    st.markdown("""
+    ### Creators:
+    - **Michael Lagunday**   
+    - **Lance Salamanca**    
+
+    *Submitted for GEC003 - Contemporary World*  
+    """)
