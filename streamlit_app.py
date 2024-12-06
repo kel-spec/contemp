@@ -62,7 +62,7 @@ if page == "Home":
     st.write("Ready to start your journey with us?")
     
     # When the button is clicked, set the query params to 'Articles'
-    if st.button("Generate Words to Empower"):
+    st.button("Generate Words to Empower"):
         
 elif page == "Articles":
     st.title("Explore Empowering Articles")
