@@ -15,38 +15,32 @@ if "stories" not in st.session_state:
 # Pages
 if page == "Home":
     st.title("Welcome to She Elevates!")
+    
+    # Add an introductory banner image or header
+    st.image("https://via.placeholder.com/1200x400?text=Empowering+Women+Worldwide", caption="Empowerment in Action", use_column_width=True)
+    
     st.write("""
-        Welcome to She Elevates, a platform designed to empower and support women worldwide. We are dedicated to providing
-        resources, inspiration, and a sense of community that can help you thrive personally, professionally, and emotionally.
-
-        *What We Offer:*
-        - *Leadership Skills*: Leadership is crucial for women to excel in any field. Our resources cover the key aspects of
-          leadership, from developing confidence to managing teams and navigating obstacles in the workplace. Whether you're
-          looking to lead in your career, community, or personal life, we provide the tools you need to succeed.
-        
-        - *Know Your Rights*: Understanding your rights as a woman is empowering. Our educational articles explain legal rights
-          in areas such as workplace equality, personal safety, and reproductive rights. Knowledge of your rights equips you to
-          protect yourself and advocate for positive change in your life and society.
-        
-        - *Financial Independence*: Financial freedom gives women the power to make informed choices and live life on their
-          terms. We provide practical advice on budgeting, saving, investing, and managing debt to help you achieve long-term
-          financial independence. You can take control of your financial future, whether you're just starting or planning for
-          retirement.
-        
-        - *Inspiring Stories*: Stories from other women can inspire, motivate, and show us that overcoming obstacles is
-          possible. Our collection of success stories highlights women who have turned adversity into triumph, whether in
-          business, education, or personal achievements. These stories offer invaluable insights into resilience, determination,
-          and the power of perseverance.
-        
-        *Join Our Movement:*
-        At She Elevates, we believe that empowering women goes beyond information—it’s about creating a supportive network.
-        Together, we can overcome challenges and lift each other up to reach new heights. Let’s rise as one!
+        Welcome to She Elevates, a platform designed to empower and support women worldwide. Our mission is to provide 
+        resources, inspiration, and a sense of community to help you thrive personally, professionally, and emotionally.
     """)
 
-    # Button to share a story
-    st.subheader("Share Your Story")
-    user_story = st.text_area("What's your empowering story?", placeholder="Type your story here...")
+    # Create collapsible sections for detailed content
+    with st.expander("What We Offer"):
+        st.write("""
+            - **Leadership Skills**: Resources to help women develop confidence, manage teams, and navigate workplace challenges.
+            - **Know Your Rights**: Educational articles about workplace equality, personal safety, and reproductive rights.
+            - **Financial Independence**: Practical advice on budgeting, saving, and investing for long-term financial security.
+            - **Inspiring Stories**: Real stories from women who turned challenges into opportunities for success.
+        """)
 
+    # Add a video section for user engagement
+    st.subheader("Get Inspired")
+    st.video("https://www.youtube.com/watch?v=1y9E88_PpWg")  # Replace with a relevant empowerment video
+
+    # Story-sharing interactive feature
+    st.subheader("Share Your Story")
+    st.write("Your voice matters! Share your empowering story and inspire others.")
+    user_story = st.text_area("What's your empowering story?", placeholder="Type your story here...")
     if st.button("Submit Story"):
         if user_story:
             st.session_state.stories.append(user_story)
@@ -54,6 +48,20 @@ if page == "Home":
         else:
             st.error("Please write your story before submitting.")
 
+    # Add a motivational quote carousel
+    st.subheader("Words to Empower")
+    quotes = [
+        "“There is no limit to what we, as women, can accomplish.” – Michelle Obama",
+        "“I am not free while any woman is unfree, even when her shackles are very different from my own.” – Audre Lorde",
+        "“A woman with a voice is, by definition, a strong woman.” – Melinda Gates",
+        "“The most courageous act is still to think for yourself. Aloud.” – Coco Chanel"
+    ]
+    st.info(random.choice(quotes))  # Randomly display one quote per refresh
+    
+    # CTA button to explore the platform further
+    st.write("Ready to start your journey with us?")
+    st.button("Explore Articles", on_click=lambda: st.experimental_set_query_params(page="Articles"))
+    
 elif page == "Articles":
     st.title("Educational Articles")
     st.write("""
