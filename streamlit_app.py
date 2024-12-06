@@ -97,17 +97,17 @@ elif page == "Articles":
             - [Emergency Fund Essentials](#)
         """)
 
-    # Highlight featured articles with images
+    # Highlight featured articles with links
     st.subheader("Featured Articles")
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image("https://via.placeholder.com/300x200?text=Leadership+Tips", caption="5 Tips to Elevate Your Leadership Skills")
-        st.button("Read Article", key="article1")
+        st.image("https://www.thebalancemoney.com/thmb/k1vstgDS1GTccOgxbbHKuyTxKRQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/top-leadership-skills-2063782_final-5b3e6be646e0fb0036272f42-5bbf7e0246e0fb0026d6416a.png", caption="5 Tips to Elevate Your Leadership Skills")
+        st.markdown("[Read Article](https://www.investopedia.com/articles/pf/12/leadership-skils.asp)", unsafe_allow_html=True)
     
     with col2:
-        st.image("https://via.placeholder.com/300x200?text=Financial+Guide", caption="Financial Freedom: A Guide for Women")
-        st.button("Read Article", key="article2")
+        st.image("https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1698264230i/127827796.jpg", caption="Financial Freedom: A Guide for Women")
+        st.markdown("[Read Article](https://globalwomanmagazine.com/your-guide-to-financial-freedom/)", unsafe_allow_html=True)
 
     # Search bar for article filtering
     st.subheader("Find an Article")
